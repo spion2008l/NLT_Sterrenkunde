@@ -14,9 +14,6 @@ data['Vmag'] = data['Vmag'].str.replace(',', '.')
 data['Plx'] = data['Plx'].str.replace(' ', '')
 data['Plx'] = data['Plx'].str.replace(',', '.')
 
-data['B-V'] = data['B-V']
-data['B-V'] = data['B-V']
-
 # NaN en float
 data['Vmag'] = pd.to_numeric(data['Vmag'], errors='coerce')
 data['Plx'] = pd.to_numeric(data['Plx'], errors='coerce')
