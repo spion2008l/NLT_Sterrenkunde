@@ -14,8 +14,8 @@ data['Vmag'] = data['Vmag'].str.replace(',', '.')
 data['Plx'] = data['Plx'].str.replace(' ', '')
 data['Plx'] = data['Plx'].str.replace(',', '.')
 
-data['B-V'] = data['B-V'].str.replace(' ', '')
-data['B-V'] = data['B-V'].str.replace(',', '.')
+data['B-V'] = data['B-V']
+data['B-V'] = data['B-V']
 
 # NaN en float
 data['Vmag'] = pd.to_numeric(data['Vmag'], errors='coerce')
@@ -28,12 +28,9 @@ plx = data['Plx']
 BV = data['B-V']
 
 # Plotten
-plt.scatter((vmag-5*(np.log10((1000/plx)/10))), (BV))
+plt.scatter((BV), (vmag-5*(np.log10((1000/plx)/10))), s=1)
 plt.gca().invert_yaxis()
 plt.xlabel('B-V')
 plt.ylabel('Absolute magnitude')
 plt.title('HR-Diagram')
 plt.show()
-
-# Debug
-print(data.head())
