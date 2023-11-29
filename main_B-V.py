@@ -5,14 +5,6 @@ import math
 
 # Import
 data = pd.read_table('asu_unlimited.txt', delimiter=';', skiprows=[1,2])
-print(data.head())
-
-# , En ' ' vervangen
-data['Vmag'] = data['Vmag'].str.replace(' ', '')
-data['Vmag'] = data['Vmag'].str.replace(',', '.')
-
-data['Plx'] = data['Plx'].str.replace(' ', '')
-data['Plx'] = data['Plx'].str.replace(',', '.')
 
 # NaN en float
 data['Vmag'] = pd.to_numeric(data['Vmag'], errors='coerce')
@@ -25,7 +17,7 @@ plx = data['Plx']
 BV = data['B-V']
 
 # Plotten
-plt.scatter((BV), (vmag-5*(np.log10((1000/plx)/10))), s=1)
+plt.scatter((BV), (vmag-5*(np.log10((1000/plx)/10))), s=0.01)
 plt.gca().invert_yaxis()
 plt.xlabel('B-V')
 plt.ylabel('Absolute magnitude')
