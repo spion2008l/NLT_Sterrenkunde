@@ -1,4 +1,5 @@
 # NLT_Sterrenkunde
+(For a windows computer)
 
 Requirements:
 - Default python imports
