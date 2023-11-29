@@ -1,4 +1,6 @@
 # NLT_Sterrenkunde
+
+## Remove the lines of '#' and the blank lines before the data, in the txt file u want to use.
 (For a windows computer)
 
 Requirements:
