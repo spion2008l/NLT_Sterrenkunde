@@ -15,7 +15,7 @@ tk.Tk().withdraw()
 
 fn = askopenfilename()
 
-data = pd.read_table(fn, delimiter=';', skiprows=[1,2])
+data = pd.read_table(fn, delimiter=';', skiprows=[1,2], comment='#')
 
 #NaN en float
 data['Vmag'] = pd.to_numeric(data['Vmag'], errors='coerce')
